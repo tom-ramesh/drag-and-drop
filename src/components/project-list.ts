@@ -30,6 +30,7 @@ export class ProjectList
 
   @autobind
   dropHandler(event: DragEvent): void {
+    console.log("test");
     const prjId = event.dataTransfer!.getData("text/plain");
     console.log(prjId, this.type);
     projectState.moveProject(
