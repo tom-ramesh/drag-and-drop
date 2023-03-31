@@ -31,14 +31,16 @@ export class ProjectList
   @autobind
   dropHandler(event: DragEvent): void {
     const prjId = event.dataTransfer!.getData("text/plain");
-    console.log(prjId);
+    console.log("prjId", prjId);
     projectState.moveProject(
       prjId,
       this.type == "active" ? ProjectStatus.Active : ProjectStatus.Finished
     );
   }
 
-  test() {}
+  test() {
+    console.log("test fn");
+  }
 
   @autobind
   dragLeaveHandler(_: DragEvent): void {
