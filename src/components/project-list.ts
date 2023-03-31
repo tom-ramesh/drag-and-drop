@@ -28,6 +28,8 @@ export class ProjectList
     }
   }
 
+  conflictFn() {}
+
   @autobind
   dropHandler(event: DragEvent): void {
     const prjId = event.dataTransfer!.getData("text/plain");
