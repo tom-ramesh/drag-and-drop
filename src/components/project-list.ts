@@ -38,6 +38,8 @@ export class ProjectList
     );
   }
 
+  test() {}
+
   @autobind
   dragLeaveHandler(_: DragEvent): void {
     const listEl = this.element.querySelector("ul");
