@@ -31,15 +31,10 @@ export class ProjectList
   @autobind
   dropHandler(event: DragEvent): void {
     const prjId = event.dataTransfer!.getData("text/plain");
-    console.log("prjId", prjId);
     projectState.moveProject(
       prjId,
       this.type == "active" ? ProjectStatus.Active : ProjectStatus.Finished
     );
-  }
-
-  test() {
-    console.log("test fn");
   }
 
   @autobind
